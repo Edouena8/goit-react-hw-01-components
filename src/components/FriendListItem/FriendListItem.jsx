@@ -1,13 +1,15 @@
-import css from './FriendListItem.module.css';
 import PropTypes from 'prop-types';
+import { FriendItem, Avatar, FriendName } from './FriendListItem.styled';
+import { FaCircle } from 'react-icons/fa';
+import { iconSize } from 'components/contants';
 
 export const FriendListItem = ({id, avatar, name, isOnline}) => {
     return  (
-        <li className={css.item} key={id}>
-            <span class="status">{isOnline}</span>
-            <img class="avatar" src={avatar} alt={name} width="48" />
-            <p class="name">{name}</p>
-        </li>
+        <FriendItem key={id} status={isOnline}>
+            <FaCircle sixe={iconSize.sm}/>
+            <Avatar src={avatar} alt={name} width="48" />
+            <FriendName>{name}</FriendName>
+        </FriendItem>
     )
 };
 
