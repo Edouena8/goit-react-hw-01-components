@@ -5,7 +5,7 @@ import { iconSize } from 'components/contants';
 
 export const FriendListItem = ({id, avatar, name, isOnline}) => {
     return  (
-        <FriendItem key={id} status={isOnline}>
+        <FriendItem key={id} isOnline={isOnline}>
             <FaCircle sixe={iconSize.sm}/>
             <Avatar src={avatar} alt={name} width="48" />
             <FriendName>{name}</FriendName>

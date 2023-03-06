@@ -1,11 +1,7 @@
 import styled from '@emotion/styled';
 
 const setColor = props => {
-    if(props.status === true) {
-        return 'green';
-    } else {
-        return 'red';
-    }
+    return props.isOnline ? 'green' : 'red';
 }
 
 export const FriendItem = styled.li`
